@@ -39,7 +39,10 @@ class _MemoryScreenState extends State<MemoryScreen> {
                     .map(
                       (card) =>
                           card.matched || selectedCards.contains(card.index)
-                              ? Image.asset(card.imagePath)
+                              ? ClipRRect(
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  child: Image.asset(card.imagePath),
+                                )
                               : GestureDetector(
                                   onTap: () {
                                     if (paused) return;
@@ -70,7 +73,9 @@ class _MemoryScreenState extends State<MemoryScreen> {
                                       }
                                     }
                                   },
-                                  child: Image.asset(cardBackPath),
+                                  child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(16.0),
+                                      child: Image.asset(cardBackPath)),
                                 ),
                     )
                     .toList(),
