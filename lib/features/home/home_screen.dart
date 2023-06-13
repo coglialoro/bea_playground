@@ -17,7 +17,10 @@ class HomeScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (_) => const MemoryScreen()),
               );
             },
-            icon: Image.asset("images/memory_icon.png"),
+            icon: Image.asset(
+              "images/memory_icon.png",
+            ),
+            iconSize: 96.0,
           ),
         ],
       ),
