@@ -1,3 +1,4 @@
+import 'package:bea_playground/features/credits/credit_screen.dart';
 import 'package:bea_playground/features/memory/memory_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const CreditScreen()));
+              },
+              child: const Text("Credits"),
+            )
           ],
         ),
       ),
